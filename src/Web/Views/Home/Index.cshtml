@@ -1,5 +1,6 @@
 ﻿@{
     Layout = null;
+    var wallet = "15kEH4xJm3WFDkDpvGehcekV37f8HCJXND";
 } 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 ie7"> <![endif]-->
@@ -164,11 +165,11 @@
                             </button>
                         </div>
 
-                        <input type="text" class="form-control" id="wallet" name="Wallet" readonly value="15kEH4xJm3WFDkDpvGehcekV37f8HCJXND">
+                        <input type="text" class="form-control" id="wallet" name="Wallet" readonly value="@wallet">
                         <label for="wallet" class="control-label">Wallet address</label>
 
                         <div class="input-group-addon">
-                            <button type="button" class="btn btn--icon copy_code" aria-label="Copied!" data-clipboard-text="15kEH4xJm3WFDkDpvGehcekV37f8HCJXND">
+                            <button type="button" class="btn btn--icon copy_code" aria-label="Copied!" data-clipboard-text="@wallet">
                                 <i class="icon icon--copy_icn"></i>
                             </button>
                         </div>
@@ -324,9 +325,9 @@
     <div class="modal__body">
         <div class="modal__section">
             <div class="modal__content">
-                <img src="img/qr_full.png" width="260">
+                <img src="https://lykke-qr.azurewebsites.net/QR/@(wallet).gif?size=260" width="260">
                 <div class="accent">Wallet address</div>
-                <div class="wallet_address">33KsMNpXDe8ioBcDmj86skazdzQaXF5aVk</div>
+                <div class="wallet_address">@wallet</div>
             </div>
         </div>
         <button type="button" class="modal__close" data-dismiss="modal"></button>
