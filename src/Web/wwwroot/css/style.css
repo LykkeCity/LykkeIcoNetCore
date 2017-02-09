@@ -284,9 +284,9 @@ p { letter-spacing: 0; color: rgba(255, 255, 255, 0.8); font-size: 18px; font-si
 
 @media all and (max-height: 800px) { .ico_header--success { padding-top: 80px; padding-top: 5rem; padding-bottom: 80px; padding-bottom: 5rem; } }
 
-.ico_table { width: 100%; margin-bottom: 30px; margin-bottom: 1.875rem; font-size: 18px; font-size: 1.125rem; line-height: 34px; line-height: 2.125rem; }
+.ico_table { width: 100%; line-height: normal; margin-bottom: 30px; margin-bottom: 1.875rem; font-size: 18px; font-size: 1.125rem; }
 
-.ico_table tr td { padding-top: 3px; padding-top: 0.1875rem; padding-bottom: 3px; padding-bottom: 0.1875rem; }
+.ico_table tr td { padding-top: 10px; padding-bottom: 10px; vertical-align: top; }
 
 .ico_table tr td:first-child { opacity: 0.8; width: 395px; width: 24.6875rem; padding-right: 35px; padding-right: 2.1875rem; }
 
