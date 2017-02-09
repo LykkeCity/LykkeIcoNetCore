@@ -57,106 +57,115 @@
 
 <body>
 
-    <header class="ico_header ico_section_anim">
-        <div class="ico_header__img anim step1">
-            <img src="img/lykke_coin_cc.png" width="480" alt="Lykke ICO">
+<header class="ico_header ico_section_anim">
+    <div class="ico_header__img anim step1">
+        <img src="img/lykke_coin_cc.png" width="480" alt="Lykke ICO">
+    </div>
+    <div class="container">
+        <h1 class="ico_header__title anim step2">1-year Lykke forward offering</h1>
+        <div class="ico_header__desc anim step3">
+            Special limited offer<br>
+            February 9 – February 28, 2017
         </div>
+    </div>
+</header>
+
+<article class="ico_main">
+    <section class="ico_section ico_section_anim">
         <div class="container">
-            <h1 class="ico_header__title anim step2">1-year Lykke forward offering</h1>
-            <div class="ico_header__desc anim step3">
-                Special limited offer<br>
-                February 9 – February 28, 2017
+            <hr class="anim step3">
+
+            <h3 class="anim step4">Buy 1-year Lykke coins at 20% discount subject to holding coins for one year</h3>
+
+            <div class="anim step5">
+                <table class="ico_table">
+                    <tr>
+                        <td>Total Number of 1-year Lykke coins to be sold</td>
+                        <td>50,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>Type of Lykke Coins</td>
+                        <td>Registered on blockchain</td>
+                    </tr>
+                    <tr>
+                        <td>100 Lykke coins entitle to </td>
+                        <td>1 Lykke share</td>
+                    </tr>
+                    <tr>
+                        <td>Issue Price per Coin (“forward price”)</td>
+                        <td>CHF 0.04</td>
+                    </tr>
+                    <tr>
+                        <td>Date of Settlement (T = date of trigger event)</td>
+                        <td>T + 365</td>
+                    </tr>
+                    <tr>
+                        <td>Amount of Capital to be raised</td>
+                        <td>Up to CHF 2,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>Type of Contribution</td>
+                        <td>In cash</td>
+                    </tr>
+                </table>
+
+                <div class="files_link">
+                    <a href="/files/Fact_sheet_2017.pdf" class="btn btn--stroke"><i class="icon icon--pdf"></i> Fact sheet</a>
+                    <!--<a href="/files/Lykke_2017.pdf" class="btn btn--stroke"><i class="icon icon--pdf"></i> Investor deck</a>-->
+                </div>
             </div>
+
+
+            <button type="button" class="btn btn--primary btn-block" data-toggle="slide" data-target="#form">Commit</button>
+
         </div>
-    </header>
+    </section>
 
-    <article class="ico_main">
-        <section class="ico_section ico_section_anim">
-            <div class="container">
-                <hr class="anim step3">
+    <section class="ico_section ico_section--form" style="display: none" id="form">
 
-                <h3 class="anim step4">Buy 1-year Lykke coins at 20% discount subject to holding coins for one year</h3>
+        <div class="container">
+            <form action="@Url.Action("Submit")" class="form" id="form_ico" method="post">
+                <button type="button" class="btn_close _hide_this_form"></button>
 
-                <div class="anim step5">
-                    <table class="ico_table">
-                        <tr>
-                            <td>Total Number of 1-year Lykke coins to be sold</td>
-                            <td>50,000,000</td>
-                        </tr>
-                        <tr>
-                            <td>Issue Price per Coin (“forward price”)</td>
-                            <td>CHF 0.04</td>
-                        </tr>
-                        <tr>
-                            <td>Date of Settlement (T = date of trigger event)</td>
-                            <td>T + 365</td>
-                        </tr>
-                        <tr>
-                            <td>Amount of Capital to be raised</td>
-                            <td>Up to CHF 2,000,000</td>
-                        </tr>
-                        <tr>
-                            <td>Type of Contribution</td>
-                            <td>In cash and bitcoins</td>
-                        </tr>
-                    </table>
+                <h3>1-year Lykke Forward Purchase Agreement</h3>
+                <p>Lykke Corp herewith sells to the undersigned and the undersigned herewith acquires,</p>
+                <p>1-year Lykke coins in the amount of:</p>
 
-                    <div class="files_link">
-                        <a href="/files/Fact_sheet_2017.pdf" class="btn btn--stroke"><i class="icon icon--pdf"></i> Fact sheet</a>
-                        <!--<a href="/files/Lykke_2017.pdf" class="btn btn--stroke"><i class="icon icon--pdf"></i> Investor deck</a>-->
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <input type="text" id="amount" name="amount" class="form-control">
+                            <label for="amount" class="control-label">Amount</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <select name="currency" id="currency" class="form-control form-control--select">
+                                <option value="usd" selected>USD</option>
+                                <option value="eur">EUR</option>
+                                <option value="rub">CHF</option>
+                                <option value="eur">GBP</option>
+                            </select>
+                            <label for="currency" class="control-label">Currency</label>
+                            <i class="icon icon--select_icn"></i>
+                        </div>
                     </div>
                 </div>
 
+                <p>The transaction price of a 1-year Lykke coin is CHF 0.04 (20% discount).</p>
+                <p>This is a special limited offer valid only between February 9th and February 28th 2017.</p>
+                <!--<p>The payment of the stated amount shall be made to the wallet:</p>-->
 
-                <button type="button" class="btn btn--primary btn-block" data-toggle="slide" data-target="#form">Commit</button>
-
-            </div>
-        </section>
-
-        <section class="ico_section ico_section--form" style="display: none" id="form">
-
-            <div class="container">
-                <form action="@Url.Action("Submit")" class="form" id="form_ico" method="post">
-                    <button type="button" class="btn_close _hide_this_form"></button>
-
-                    <h3>1-year Lykke Forward Purchase Agreement</h3>
-                    <p>Lykke Corp herewith sells to the undersigned and the undersigned herewith acquires,</p>
-                    <p>1-year Lykke coins in the amount of:</p>
-
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <div class="form-group">
-                                <input type="text" id="amount" name="amount" class="form-control">
-                                <label for="amount" class="control-label">Amount</label>
-                            </div>
+                <!--<div class="form-group form-group--qr">
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <button type="button" class="btn btn--icon" data-toggle="modal" data-target="#qrbar">
+                                <i class="icon icon--qr"></i>
+                            </button>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <select name="currency" id="currency" class="form-control form-control--select">
-                                    <option value="usd" selected>USD</option>
-                                    <option value="eur">EUR</option>
-                                    <option value="rub">RUB</option>
-                                </select>
-                                <label for="currency" class="control-label">Currency</label>
-                                <i class="icon icon--select_icn"></i>
-                            </div>
-                        </div>
-                    </div>
 
-                    <p>The transaction price of a 1-year Lykke coin is CHF 0.04 (20% discount).</p>
-                    <p>This is a special limited offer valid only between Februrary 9th and February 28th 2017.</p>
-                    <!--<p>The payment of the stated amount shall be made to the wallet:</p>-->
-
-                    <!--<div class="form-group form-group--qr">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <button type="button" class="btn btn--icon" data-toggle="modal" data-target="#qrbar">
-                                    <i class="icon icon--qr"></i>
-                                </button>
-                            </div>
-
-                            <input type="text" class="form-control" id="wallet" name="Wallet" readonly value="33KsMNpXDe8ioBcDmj86skazdzQaXF5aVk">
-                            <label for="wallet" class="control-label">Wallet address</label>
+                        <input type="text" class="form-control" id="wallet" name="Wallet" readonly value="15kEH4xJm3WFDkDpvGehcekV37f8HCJXND">
+                        <label for="wallet" class="control-label">Wallet address</label>
 
                             <div class="input-group-addon">
                                 <button type="button" class="btn btn--icon copy_code" aria-label="Copied!" data-clipboard-text="33KsMNpXDe8ioBcDmj86skazdzQaXF5aVk">
@@ -166,144 +175,144 @@
                         </div>
                     </div>-->
 
-                    <h4>The Undersigned</h4>
+                <h4>The Undersigned</h4>
 
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" class="form-control" required>
-                        <label for="name" class="control-label">(Company) Name</label>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" id="street" name="street" class="form-control" required>
-                        <label for="street" class="control-label">Street</label>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" id="city" name="city" class="form-control" required>
-                        <label for="city" class="control-label">Post Code/City</label>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" id="country" name="country" class="form-control" required>
-                        <label for="country" class="control-label">Country</label>
-                    </div>
-
-                    <p>The 1-year Lykke coins shall be credited to the Lykke wallet which was created with the following email address:</p>
-
-                    <div class="form-group">
-                        <input type="text" id="email" name="email" class="form-control" required>
-                        <label for="email" class="control-label">Email used to register Lykke Wallet</label>
-                    </div>
-
-                    <div class="submit-group">
-                        <button class="btn btn--primary btn-block">Submit</button>
-                    </div>
-                </form>
-
-                <div class="success_text text-center" style="display: none">
-                    <h3>Thank you for submitting your order!</h3>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" class="form-control" required>
+                    <label for="name" class="control-label">(Company) Name</label>
                 </div>
+
+                <div class="form-group">
+                    <input type="text" id="street" name="street" class="form-control" required>
+                    <label for="street" class="control-label">Street</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="city" name="city" class="form-control" required>
+                    <label for="city" class="control-label">Post Code/City</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="country" name="country" class="form-control" required>
+                    <label for="country" class="control-label">Country</label>
+                </div>
+
+                <p>The 1-year Lykke coins shall be credited to the Lykke Wallet which was created with the following email address:</p>
+
+                <div class="form-group">
+                    <input type="text" id="email" name="email" class="form-control" required>
+                    <label for="email" class="control-label">Email used to register Lykke Wallet</label>
+                </div>
+
+                <div class="submit-group">
+                    <button class="btn btn--primary btn-block">Submit</button>
+                </div>
+            </form>
+
+            <div class="success_text text-center" style="display: none">
+                <h3>Thank you for submitting your order!</h3>
             </div>
-        </section>
-    </article>
+        </div>
+    </section>
+</article>
 
-    <footer class="ico_footer">
-        <div class="container">
-            <div class="ico_social">
-                <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
-                <script src="//yastatic.net/share2/share.js"></script>
-                <div class="ya-share2" data-lang="en" data-services="facebook,twitter,linkedin"></div>
-            </div>
+<footer class="ico_footer">
+    <div class="container">
+        <div class="ico_social">
+            <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+            <script src="//yastatic.net/share2/share.js"></script>
+            <div class="ya-share2" data-lang="en" data-services="facebook,twitter,linkedin"></div>
+        </div>
 
-            <div class="ico_footer__menu">
-                <div class="row">
-                    <div class="col-xs-6 col-sm-3">
-                        <ul class="ico_menu">
-                            <li class="ico_menu__item ico_menu__item--title">About Lykke</li>
-                            <li class="ico_menu__item">
-                                <a href="" target="_blank">Press kit
-</a>
-                            </li>
-                            <li class="ico_menu__item">
-                                <a href="https://lykke.com/contacts.php" target="_blank">Contacts
-</a>
-                            </li>
-                            <li class="ico_menu__item">
-                                <a href="" target="_blank">
-Support
+        <div class="ico_footer__menu">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                    <ul class="ico_menu">
+                        <li class="ico_menu__item ico_menu__item--title">About Lykke</li>
+                        <li class="ico_menu__item">
+                            <a href="https://lykke.com/city/blog/2017-02-09/1-year_forward_offering" target="_blank">Press kit
+                            </a>
+                        </li>
+                        <li class="ico_menu__item">
+                            <a href="https://lykke.com/contacts.php" target="_blank">Contacts
+                            </a>
+                        </li>
+                        <li class="ico_menu__item">
+                            <a href="mailto:support@lykke.com" target="_blank">
+                                Support
 
-</a>
-                            </li>
-                            <li class="ico_menu__item">
-                                <a href="https://lykke.com/city/blog/index" target="_blank">
-Blog
+                            </a>
+                        </li>
+                        <li class="ico_menu__item">
+                            <a href="https://lykke.com/city/blog/index" target="_blank">
+                                Blog
 
-</a>
-                            </li>
-                        </ul>
-                    </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-                    <div class="col-xs-6 col-sm-3">
-                        <ul class="ico_menu">
-                            <li class="ico_menu__item ico_menu__item--title">Apps</li>
-                            <li class="ico_menu__item">
-                                <a href="https://appsto.re/ru/Dwjvcb.i" target="_blank">Lykke Wallet iOS
-</a>
-                            </li>
-                            <li class="ico_menu__item">
-                                <a href="https://play.google.com/store/apps/details?id=com.lykkex.LykkeWallet" target="_blank">Lykke Wallet Android
-</a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="col-xs-6 col-sm-3">
+                    <ul class="ico_menu">
+                        <li class="ico_menu__item ico_menu__item--title">Apps</li>
+                        <li class="ico_menu__item">
+                            <a href="https://appsto.re/ru/Dwjvcb.i" target="_blank">Lykke Wallet iOS
+                            </a>
+                        </li>
+                        <li class="ico_menu__item">
+                            <a href="https://play.google.com/store/apps/details?id=com.lykkex.LykkeWallet" target="_blank">Lykke Wallet Android
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-                    <div class="col-xs-6 col-sm-3">
-                        <ul class="ico_menu">
-                            <li class="ico_menu__item ico_menu__item--title">Services</li>
-                            <li class="ico_menu__item">
-                                <a href="https://streams.lykke.com/" target="_blank">Lykke Streams
-</a>
-                            </li>
-                            <li class="ico_menu__item">
-                                <a href="https://blockchainexplorer.lykke.com/" target="_blank">Blockchain Explorer
-</a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="col-xs-6 col-sm-3">
+                    <ul class="ico_menu">
+                        <li class="ico_menu__item ico_menu__item--title">Services</li>
+                        <li class="ico_menu__item">
+                            <a href="https://streams.lykke.com/" target="_blank">Lykke Streams
+                            </a>
+                        </li>
+                        <li class="ico_menu__item">
+                            <a href="https://blockchainexplorer.lykke.com/" target="_blank">Blockchain Explorer
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-                    <div class="col-xs-6 col-sm-3">
-                        <ul class="ico_menu">
-                            <li class="ico_menu__item ico_menu__item--title">Social Media</li>
-                            <li class="ico_menu__item">
-                                <a href="https://www.facebook.com/groups/542506412568917/" target="_blank">Facebook
+                <div class="col-xs-6 col-sm-3">
+                    <ul class="ico_menu">
+                        <li class="ico_menu__item ico_menu__item--title">Social Media</li>
+                        <li class="ico_menu__item">
+                            <a href="https://www.facebook.com/groups/542506412568917/" target="_blank">Facebook
 
-</a>
-                            </li>
-                            <li class="ico_menu__item">
-                                <a href="https://twitter.com/LykkeCity" target="_blank">Twitter
-</a>
-                            </li>
-                            <li class="ico_menu__item">
-                                <a href="https://www.youtube.com/channel/UCmMYipGdKMF0kzfaE-PXsNQ" target="_blank">
+                            </a>
+                        </li>
+                        <li class="ico_menu__item">
+                            <a href="https://twitter.com/LykkeCity" target="_blank">Twitter
+                            </a>
+                        </li>
+                        <li class="ico_menu__item">
+                            <a href="https://www.youtube.com/channel/UCmMYipGdKMF0kzfaE-PXsNQ" target="_blank">
 
-Youtube
+                                Youtube
 
-</a>
-                            </li>
-                            <li class="ico_menu__item">
-                                <a href="https://www.linkedin.com/company/lykke-ag" target="_blank">
-LinkedIn
+                            </a>
+                        </li>
+                        <li class="ico_menu__item">
+                            <a href="https://www.linkedin.com/company/lykke-ag" target="_blank">
+                                LinkedIn
 
-</a>
-                            </li>
-                            <li class="ico_menu__item">
-                                <a href="https://www.reddit.com/r/lykke/" target="_blank">
-Reddit
+                            </a>
+                        </li>
+                        <li class="ico_menu__item">
+                            <a href="https://www.reddit.com/r/lykke/" target="_blank">
+                                Reddit
 
-</a>
-                            </li>
-                        </ul>
-                    </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
                 </div>
             </div>
@@ -320,19 +329,19 @@ Reddit
         </div>
     </footer>
 
-    <div class="modal fade modal--qrbar" id="qrbar">
+<div class="modal fade modal--qrbar" id="qrbar">
 
-        <div class="modal__body">
-            <div class="modal__section">
-                <div class="modal__content">
-                    <img src="img/qr_full.png" width="260">
-                    <div class="accent">Wallet address</div>
-                    <div class="wallet_address">33KsMNpXDe8ioBcDmj86skazdzQaXF5aVk</div>
-                </div>
+    <div class="modal__body">
+        <div class="modal__section">
+            <div class="modal__content">
+                <img src="img/qr_full.png" width="260">
+                <div class="accent">Wallet address</div>
+                <div class="wallet_address">33KsMNpXDe8ioBcDmj86skazdzQaXF5aVk</div>
             </div>
-            <button type="button" class="modal__close" data-dismiss="modal"></button>
         </div>
+        <button type="button" class="modal__close" data-dismiss="modal"></button>
     </div>
+</div>
 
 </body>
 
