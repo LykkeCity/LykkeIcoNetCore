@@ -334,7 +334,9 @@ label.error { font-weight: normal; color: rgba(224, 56, 56, 0.57); margin-top: 2
 
 .input-group-addon .btn:hover .icon--qr, .input-group-addon .ico_btn:hover .icon--qr, .input-group-addon .btn:focus .icon--qr, .input-group-addon .ico_btn:focus .icon--qr { opacity: 1; }
 
-.success_text h3 { margin-bottom: 0; }
+.success_text h3 { margin-bottom: 10px; margin-bottom: 0.625rem; }
+
+.success_text p { margin-bottom: 0; }
 
 .form-control ~ .input-group-addon { right: 0; left: auto; }
 
