@@ -211,7 +211,9 @@
             </form>
 
             <div class="success_text text-center" style="display: none">
-                <h3>Thank you for submitting your order!</h3>
+                <h3>Dear <span id="person_name"></span>,<br>Thank you for submitting your order!</h3>
+                <p>We will review the information you provided and get in touch with you within 3 business days.
+                  A copy of your order will be sent to the email address you have provided.</p>
             </div>
         </div>
     </section>
@@ -395,7 +397,6 @@
   });
 
   $(document).ready(function () {
-
     var $form = $('#form_ico');
     $form.validate({
       submitHandler: function(form) {
@@ -411,9 +412,11 @@
               opacity: "toggle"
             });
 
-            $('.success_text').animate({
-              opacity: "toggle"
-            });
+            var name_val = $('input#name').val();
+
+            $('.success_text')
+            .animate({ opacity: "toggle" })
+            .find('#person_name').text(name_val);
           }
         });
       }
