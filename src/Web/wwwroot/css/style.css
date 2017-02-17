@@ -366,7 +366,7 @@ label.error { font-weight: normal; color: rgba(224, 56, 56, 0.57); margin-top: 2
 
 .files_link { margin-bottom: 120px; margin-bottom: 7.5rem; }
 
-.files_link .btn, .files_link .ico_btn { margin-right: 15px; margin-right: 0.9375rem; }
+.files_link .btn, .files_link .ico_btn { margin-right: 15px; margin-right: 0.9375rem; margin-bottom: 10px; margin-bottom: 0.625rem; }
 
 @media all and (max-width: 480px) { .files_link { margin-bottom: 30px; }
   .files_link .btn, .files_link .ico_btn { margin-right: 0; margin-bottom: 15px; width: 100%; } }
