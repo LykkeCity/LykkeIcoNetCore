@@ -19,7 +19,7 @@ namespace Web.Controllers
             return View();
         }
 
-        [HttpPost("/isalive")]
+        [HttpGet("/isalive")]
         public IActionResult IsAlive()
         {
             return Json(new { Version="1.0.0" });
