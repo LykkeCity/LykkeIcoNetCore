@@ -1,4 +1,7 @@
-﻿using AzureRepositories;
+﻿using System;
+using AzureRepositories;
+using AzureStorage.Tables;
+using Common.Log;
 using Lykke.Logs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -35,14 +38,16 @@ namespace Web
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
-            var connectionString = Configuration.GetValue<string>("ConnectionString") ?? "UseDevelopmentStorage=true";
+             var connectionString = Configuration.GetValue<string>("ConnectionString") ?? "UseDevelopmentStorage=true";
 
-            var logSettings = new AzureLogSettings
-            {
-                LogConnectionString = connectionString
-            };
+            Console.WriteLine("ConnString:"+ (connectionString ?? "[null]"));
 
-            var logs = services.UseLogToAzureStorage(logSettings);
+            var logs = new LykkeLogToAzureStorage(
+                "Forward2017",
+                new AzureTableStorage<LogEntity>(connectionString, "Logs", null),
+                null);
+
+            services.AddSingleton<ILog>(logs);
 
             services.UseAzureRepositories(connectionString, logs);
 
@@ -57,8 +62,6 @@ namespace Web
             loggerFactory.AddDebug();
 
 
-            app.UseApplicationInsightsRequestTelemetry();
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -68,8 +71,6 @@ namespace Web
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
-            app.UseApplicationInsightsExceptionTelemetry();
 
             app.UseStaticFiles();
 
@@ -83,7 +84,7 @@ namespace Web
     }
 
 
-    public class AzureLogSettings : ILogToAzureSettings
+    public class AzureLogSettings 
     {
         public string LogConnectionString { get; set; }
     }

@@ -16,11 +16,14 @@ namespace Web.Controllers
 
         public IActionResult Index()
         {
-
-            if (!Request.IsHttps)
-                return Redirect("https://"+Request.Host);
-
             return View();
+        }
+
+        [HttpPost("/isalive")]
+        public IActionResult IsAlive()
+        {
+            return Json(new { Version="1.0.0" });
+
         }
 
         [HttpPost("/Submit")]
