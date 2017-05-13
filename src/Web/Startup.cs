@@ -40,8 +40,6 @@ namespace Web
 
              var connectionString = Configuration.GetValue<string>("ConnectionString") ?? "UseDevelopmentStorage=true";
 
-            Console.WriteLine("ConnString:"+ (connectionString ?? "[null]"));
-
             var logs = new LykkeLogToAzureStorage(
                 "Forward2017",
                 new AzureTableStorage<LogEntity>(connectionString, "Logs", null),
